@@ -1,4 +1,4 @@
-# ALPS — Paper Website
+# ALPS -- Paper Website
 
 Project page for the SIGGRAPH 2026 paper *Gradient Descent in the ALPS:
 Abstracted Low-Poly Stylization and Fabrication* by Ruben Wiersma,
