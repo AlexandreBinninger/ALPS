@@ -245,7 +245,7 @@ export default function Results() {
                   title={prettify(name)}
                 >
                   <img
-                    src={`${ASSET_BASE}/input_image/${name}.jpg`}
+                    src={`${ASSET_BASE}/input_image/${name}_sm.jpg`}
                     alt={prettify(name)}
                     loading="lazy"
                     className="h-16 w-16 shrink-0 object-cover md:h-12 md:w-12"

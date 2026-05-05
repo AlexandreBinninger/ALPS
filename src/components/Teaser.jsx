@@ -1,11 +1,11 @@
 const panels = [
-  { src: '/ALPS/media/teaser/skier_input.png', label: 'Semantic guide' },
+  { src: '/ALPS/media/teaser/skier_input_sm.jpg', label: 'Semantic guide' },
   {
     src: '/ALPS/media/teaser/skier_argmax.png',
     label: 'Low-poly abstraction',
   },
   {
-    src: '/ALPS/media/teaser/skier_embroidery.png',
+    src: '/ALPS/media/teaser/skier_embroidery_sm.jpg',
     label: 'Embroidery fabrication',
   },
 ]
