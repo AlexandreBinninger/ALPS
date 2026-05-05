@@ -68,6 +68,9 @@ export default function Method() {
             loading="lazy"
           />
         </button>
+        <p className="mt-2 text-center text-xs italic text-neutral-500">
+          Click the figure to enlarge.
+        </p>
         <figcaption className="mt-3 text-sm text-neutral-600">
           Pipeline of our method.{' '}
           <span className="font-semibold">Initialization (left):</span> we
