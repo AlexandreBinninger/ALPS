@@ -15,10 +15,9 @@ const fabrications = [
           Ink/Stitch
         </a>
         . ALPS can also impose high-level structural constraints, such as
-        vertical symmetry, an Eulerian boundary that lets the outline be
+        vertical symmetry, an Eulerian grid that lets the outline be
         stitched in a single continuous pass, or user-fixed boundary points
-        for a perfectly circular pattern. Each constraint is preserved
-        end-to-end into the embroidered piece.
+        for a perfectly circular pattern.
       </>
     ),
     rows: [
@@ -82,7 +81,7 @@ const fabrications = [
   },
   {
     title: 'Faux stained glass',
-    body: 'We merge same-colored triangles and emit a single cut path along shared edges to drive a laser cutter. Pieces of acrylic, cut layer-by-layer from the palette, are assembled into a stained-glass-style mosaic.',
+    body: 'We can emit a cut path along shared edges to drive a laser cutter. Pieces of acrylic, cut layer-by-layer from the palette, are assembled into a stained-glass-style mosaic.',
     rows: [
       {
         cells: [
@@ -95,7 +94,7 @@ const fabrications = [
   },
   {
     title: 'Wood mosaic',
-    body: 'The same vector cut paths drive a laser cutter on layered wood veneers. This example shows ALPS used as a sewing-pattern-style cut plan for a different substrate.',
+    body: 'The same vector cut paths drive a laser cutter, this time on layered wood veneers instead of acrylic.',
     rows: [
       {
         cells: [

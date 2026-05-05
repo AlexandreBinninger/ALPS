@@ -1,3 +1,9 @@
+import { useEffect, useState } from 'react'
+
+const PIPELINE_SRC = '/ALPS/media/method/overview.png'
+const PIPELINE_ALT =
+  'ALPS pipeline overview: saliency-based initialization, SDS optimization with mesh simplification, and palette-constrained output'
+
 const properties = [
   {
     title: 'Triangle count and quality',
@@ -14,6 +20,22 @@ const properties = [
 ]
 
 export default function Method() {
+  const [zoomed, setZoomed] = useState(false)
+
+  useEffect(() => {
+    if (!zoomed) return
+    const onKey = (e) => {
+      if (e.key === 'Escape') setZoomed(false)
+    }
+    document.addEventListener('keydown', onKey)
+    const previousOverflow = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => {
+      document.removeEventListener('keydown', onKey)
+      document.body.style.overflow = previousOverflow
+    }
+  }, [zoomed])
+
   return (
     <section id="method" className="border-t border-neutral-200 py-12 md:py-16">
       <h2 className="text-2xl font-semibold tracking-tight md:text-3xl">
@@ -33,14 +55,19 @@ export default function Method() {
       </p>
 
       <figure className="mt-8">
-        <div className="overflow-hidden rounded-lg border border-neutral-200 bg-white">
+        <button
+          type="button"
+          onClick={() => setZoomed(true)}
+          aria-label="Open larger view of the pipeline figure"
+          className="block w-full cursor-zoom-in overflow-hidden rounded-lg border border-neutral-200 bg-white transition hover:border-neutral-400 hover:shadow-md"
+        >
           <img
-            src="/ALPS/media/method/overview.png"
-            alt="ALPS pipeline overview: saliency-based initialization, SDS optimization with mesh simplification, and palette-constrained output"
+            src={PIPELINE_SRC}
+            alt={PIPELINE_ALT}
             className="w-full"
             loading="lazy"
           />
-        </div>
+        </button>
         <figcaption className="mt-3 text-sm text-neutral-600">
           Pipeline of our method.{' '}
           <span className="font-semibold">Initialization (left):</span> we
@@ -82,6 +109,32 @@ export default function Method() {
         ))}
       </ol>
 
+      {zoomed ? (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="Pipeline figure, zoomed"
+          onClick={() => setZoomed(false)}
+          className="fixed inset-0 z-50 cursor-zoom-out overflow-auto bg-black/85"
+        >
+          <div className="flex min-h-full min-w-full items-center justify-center p-4 md:p-8">
+            <img
+              src={PIPELINE_SRC}
+              alt={PIPELINE_ALT}
+              onClick={(e) => e.stopPropagation()}
+              className="max-w-none cursor-default"
+            />
+          </div>
+          <button
+            type="button"
+            onClick={() => setZoomed(false)}
+            aria-label="Close"
+            className="fixed right-4 top-4 rounded-full bg-white/10 px-3 py-1 text-2xl leading-none text-white transition hover:bg-white/20"
+          >
+            ×
+          </button>
+        </div>
+      ) : null}
     </section>
   )
 }
