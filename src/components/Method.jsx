@@ -117,7 +117,10 @@ export default function Method() {
           onClick={() => setZoomed(false)}
           className="fixed inset-0 z-50 cursor-zoom-out overflow-auto bg-black/85"
         >
-          <div className="flex min-h-full min-w-full items-center justify-center p-4 md:p-8">
+          <div
+            className="flex min-h-full min-w-full p-4 md:p-8"
+            style={{ justifyContent: 'safe center', alignItems: 'safe center' }}
+          >
             <img
               src={PIPELINE_SRC}
               alt={PIPELINE_ALT}
