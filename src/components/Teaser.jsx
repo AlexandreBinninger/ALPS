@@ -1,12 +1,8 @@
 const panels = [
   { src: '/ALPS/media/teaser/skier_input.png', label: 'Semantic guide' },
   {
-    src: '/ALPS/media/teaser/skier_softmax.png',
-    label: 'Low-poly abstraction (softmax)',
-  },
-  {
     src: '/ALPS/media/teaser/skier_argmax.png',
-    label: 'Low-poly abstraction (argmax)',
+    label: 'Low-poly abstraction',
   },
   {
     src: '/ALPS/media/teaser/skier_embroidery.png',
@@ -18,7 +14,7 @@ export default function Teaser() {
   return (
     <section className="pt-2 pb-12 md:pt-4 md:pb-16">
       <figure>
-        <div className="grid grid-cols-2 gap-2 md:grid-cols-4 md:gap-3">
+        <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
           {panels.map((p) => (
             <div key={p.label} className="flex flex-col">
               <div className="overflow-hidden rounded-md bg-neutral-50">

@@ -121,7 +121,7 @@ const fabrications = [
   },
   {
     title: 'Patchworking',
-    body: 'Mesh edges become equal-length seams. We merge adjacent same-colored triangles into larger polygonal patches to reduce assembly effort, then sew the panels into the finished piece: here, a Rosy Maple Moth.',
+    body: 'Mesh edges become equal-length seams. We merge adjacent same-colored triangles into larger polygonal patches to reduce assembly effort, then sew the panels into the finished piece.',
     rows: [
       {
         cells: [
@@ -206,9 +206,8 @@ export default function Comparisons() {
         Fabrications
       </h2>
       <p className="mt-6 text-base leading-relaxed text-neutral-700 md:text-lg">
-        Three properties of <span className="italic">ALPS</span> outputs, namely
-        color quantization, valid vector triangulation and geometric
-        abstraction, make them directly usable as fabrication blueprints.
+        Three properties of <span className="italic">ALPS</span> outputs, namely low triangle count,
+        color quantization and valid manifold tiling, make them directly usable as fabrication blueprints.
         Each row below shows the semantic guide that drove the optimization,
         the resulting palette-constrained ALPS mesh, and the physical
         fabrication.
