@@ -34,7 +34,7 @@ Pages must be enabled for the repository with the source set to
 ## Citation
 
 ```bibtex
-@inproceedings{WiersmaBinninger:ALPS:2026,
+@inproceedings{igl:ALPS:2026,
   author    = {Wiersma, Ruben and Binninger, Alexandre and Li, Peizhuo and
                Magne, Tanguy and Oehri, Annika and Segall, Aviv and
                Luterbacher, Danielle and Padilla, Marcel and Ren, Jing and
