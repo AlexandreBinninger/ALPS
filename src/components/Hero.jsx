@@ -114,19 +114,12 @@ export default function Hero() {
         <span className="text-rose-700">*</span> Equal contribution
       </p>
 
-      <div className="mt-6">
-        <a
-          href="https://s2026.siggraph.org/"
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex items-center gap-2 rounded-md bg-sky-700 px-4 py-2 text-sm font-semibold uppercase tracking-wider text-white transition hover:bg-sky-600 md:text-base"
-        >
-          <SiAcm aria-hidden="true" className="text-2xl md:text-3xl" />
-          SIGGRAPH 2026
-        </a>
-      </div>
+      <p className="mt-5 inline-flex items-center justify-center gap-2 text-sm font-semibold uppercase tracking-[0.18em] text-neutral-500">
+        <SiAcm aria-hidden="true" className="text-base text-neutral-400" />
+        SIGGRAPH 2026 · Conference Papers
+      </p>
 
-      <div className="mt-6 flex flex-wrap justify-center gap-3">
+      <div className="mt-5 flex flex-wrap justify-center gap-3">
         {links.map((l) => {
           const Icon = l.Icon
           return (
